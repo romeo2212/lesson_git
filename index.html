@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="libs/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="libs/font-awesome-4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/fonts.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<br>
+<br>
+<br>
+<div class="container">
+	<div class="row">
+		<div class="col-md-8 col-md-offset-2">
+			<div class="panel panel-success">
+			  <div class="panel-heading">
+			    <h3 class="panel-title">Users list</h3>
+			  </div>
+			  <div class="panel-body">
+			    <table class='user-data-table table table-striped table-bordered'>
+					<thead>
+						<tr>
+							<th>Name</th>
+							<th>Surname</th>
+							<th>Is Active</th>
+							<th>Actions</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><span class="change-value name-val">User name</span></td>
+							<td><span class="change-value surname-val">User surname</span></td>
+							<td><span class="status-indicator" data-active="true"></span></td>
+							<td  class="action_column"><a href="#" class="delete-line btn btn-primary"><i class="fa fa-cogs" aria-hidden="true"></i></a></td>
+						</tr>
+						<tr>
+							<td><span class="change-value">User name</span></td>
+							<td><span class="change-value">User surname</span></td>
+							<td><span class="status-indicator" data-active="false"></span></td>
+							<td class="action_column"><a href="#" class="delete-line btn btn-primary"><i class="fa fa-cogs" aria-hidden="true"></i></a></td>
+						</tr>
+						<tr>
+							<td><span class="change-value">User name</span></td>
+							<td><span class="change-value">User surname</span></td>
+							<td><span class="status-indicator" data-active="true"></span></td>
+							<td class="action_column"><a href="#" class="delete-line btn btn-primary"><i class="fa fa-cogs" aria-hidden="true"></i></a></td>
+						</tr>
+					</tbody>
+				</table>
+			  </div>
+			  <div class="panel-footer">
+			    Actions with selected rows:  
+			    <div class="btn-group group-actions">
+				    <button type="button" class="btn btn-danger" data-action="remove_line"><i class="fa fa-trash-o" aria-hidden="true"></i> Remove</button>
+				    <button type="button" class="btn btn-success" data-action="change_status_active"><i class="fa fa-user-circle" aria-hidden="true"></i> Set active </button>
+				    <button type="button" class="btn btn-warning" data-action="change_status_not_active"><i class="fa fa-user-circle" aria-hidden="true"></i> Set not active </button>
+			      	<button type="button" class="btn btn-default" data-action="uncheck"><i class="fa fa-user-circle" aria-hidden="true"></i> Uncheck all</button>
+			    </div>
+			  </div>
+			</div>
+			
+			<div class="panel panel-primary">
+			  <div class="panel-heading">
+			    <h3 class="panel-title">Add new user</h3>
+			  </div>
+			  <div class="panel-body">
+			  	<form class="user-data" novalidate>
+			  		<div class="form-group">
+			  			<input type="text" class="input_name form-control" placeholder="Name" required>
+			  		</div>
+			  		<div class="form-group">
+			  			<input type="text" class="input_surname form-control" placeholder="Surname" required>
+			  		</div>
+			  		<div class="form-group">
+			  			<label>
+			  				<input type="checkbox" class="is_active" name="is_active">
+			  				Is user active?
+			  			</label>
+			  		</div>
+			  		<div class="form-group">
+			  			<button class="btn btn-primary">Submit</button>
+			  		</div>
+				</form>
+			  </div>
+			</div>
+
+			
+		</div>
+	</div>
+</div>
+
+
+
+
+	
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/main.js"></script>
+
+	<div id="scroll_top_btn">Up</div>
+	<div class="action_window">
+		<a href="#" class="close"><i class="fa fa-window-close" aria-hidden="true"></i></a>
+		<div class="actions">
+			<a href="#" class="btn btn-danger btn-block" data-action="remove_line"><i class="fa fa-trash-o" aria-hidden="true"></i> Remove</a>
+			<a href="#" class="btn btn-success btn-block" data-action="change_status"><i class="fa fa-user-circle" aria-hidden="true"></i> Change Status</a>
+			<a href="#" class="btn btn-info btn-block" data-action="check_line"><i class="fa fa-check-square-o" aria-hidden="true"></i> Check</a>
+			<a href="#" class="btn btn-default btn-block" data-action="move_line_down"><i class="fa fa-arrow-down" aria-hidden="true"></i> Move down</a>
+			<a href="#" class="btn btn-default btn-block" data-action="move_line_up"><i class="fa fa-arrow-up" aria-hidden="true"></i> Move up</a>
+		</div>
+	</div>
+</body>
+</html>
